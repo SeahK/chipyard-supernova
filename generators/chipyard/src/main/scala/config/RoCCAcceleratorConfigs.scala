@@ -1,6 +1,7 @@
 package chipyard
 
 import org.chipsalliance.cde.config.{Config}
+import freechips.rocketchip.rocket.DCacheParams
 
 // ------------------------------
 // Configs with RoCC Accelerators
@@ -13,6 +14,26 @@ class GemminiRocketConfig extends Config(
   new chipyard.config.WithSystemBusWidth(128) ++
   new chipyard.config.AbstractConfig)
 // DOC include end: GemminiRocketConfig
+
+class Gemmini4Spica4ReRoCC4Config extends Config(
+   new rerocc.WithReRoCC(rerocc.client.ReRoCCClientParams(nCfgs=8), rerocc.manager.ReRoCCTileParams(l2TLBEntries=512, l2TLBWays=2, dcacheParams=Some(DCacheParams(nWays=2, nSets=32)))) ++
+   new supernova.DefaultMemcpyConfig ++
+   new supernova.DefaultMemcpyConfig ++
+   new supernova.DefaultMemcpyConfig ++
+   new supernova.DefaultMemcpyConfig ++                       // use SLAMFP32Gemmini systolic array GEMM accelerator
+   new gemmini.GemminiFP32DummyConfig ++
+   new gemmini.GemminiFP32DummyConfig ++
+   new gemmini.GemminiFP32DummyConfig ++
+   new gemmini.GemminiFP32DummyConfig ++                         // use SLAMFP32Gemmini systolic array GEMM accelerator
+   new freechips.rocketchip.subsystem.WithExtMemSbusBypass ++ // Add bypass path to access DRAM incoherently through an address alias
+   new freechips.rocketchip.rocket.WithNHugeCores(4) ++
+   new freechips.rocketchip.subsystem.WithInclusiveCache(nWays=2, capacityKB=4096, outerLatencyCycles=6) ++
+   new freechips.rocketchip.subsystem.WithNBanks(8) ++
+   new chipyard.config.WithSystemBusWidth(128) ++
+   new freechips.rocketchip.subsystem.WithNMemoryChannels(8) ++
+   new chipyard.config.AbstractConfig)
+
+
 
 class FPGemminiRocketConfig extends Config(
   new gemmini.GemminiFP32DefaultConfig ++                         // use FP32Gemmini systolic array GEMM accelerator

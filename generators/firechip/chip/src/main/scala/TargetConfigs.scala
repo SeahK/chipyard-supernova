@@ -298,6 +298,10 @@ class FireSimLeanGemminiPrintfRocketConfig extends Config(
   new WithFireSimConfigTweaks ++
   new chipyard.LeanGemminiPrintfRocketConfig)
 
+class FireSimSupernovaConfig extends Config(
+  new WithDefaultFireSimBridges ++
+  new WithFireSimConfigTweaks ++
+  new chipyard.Gemmini4Spica4ReRoCC4Config)
 //**********************************************************************************
 // Supernode Configurations, base off chipyard's RocketConfig
 //**********************************************************************************
