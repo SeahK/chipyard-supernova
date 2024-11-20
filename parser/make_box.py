@@ -261,7 +261,6 @@ legend_elements = [
 #plt.legend(handles=legend_elements, fontsize=12, framealpha=0)
 fig.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5,1.095), ncols=6, fontsize=17.5, frameon=False)
 plt.tight_layout()
-#plt.savefig('eval2_box.png', bbox_inches='tight', pad_inches=0.03, dpi=1200)
-plt.savefig('eval2_box.pdf', bbox_inches='tight', pad_inches=0.03, dpi=1000)
+plt.savefig('box.pdf', bbox_inches='tight', pad_inches=0.03, dpi=1000)
 
 
