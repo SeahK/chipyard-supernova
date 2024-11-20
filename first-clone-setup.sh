@@ -56,7 +56,7 @@ echo "building workload"
 ./build.sh
 rm build/slam/*
 #load sample binary
-cp ../../ae-binary/*-linux build/slam/*
+cp ../../ae-binary/*-linux build/slam/.
 
 
 cd $CYDIR
