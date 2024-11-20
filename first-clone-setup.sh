@@ -31,10 +31,19 @@ cp ../../../ae_config* .
 #make f1
 
 cd $RDIR
+# build target software
+cd software/firemarshal
+echo "Firemarshal setup"
+./init-submodules.sh
+marshal -v build br-base.json
+
+cd $RDIR
 cd generators/ae-binary
 unzip "*.zip"
 cd ..
 cd supernova/software
+#submodule
+git submodule update --init --recursive
 #rm -rf imagenet
 #unzip sample.zip
 #rm sample.zip
@@ -45,11 +54,5 @@ rm build/slam/*
 #load sample binary
 cp ../../ae-binary/*-linux build/slam/*
 
-cd $RDIR
-# build target software
-cd software/firemarshal
-echo "Firemarshal setup"
-./init-submodules.sh
-marshal -v build br-base.json
 
 cd $RDIR
