@@ -1,6 +1,6 @@
 # IMPORTANT NOTES
 
-Please refer to this [link](https://seahk.github.io/data/supernova_asplos.pdf) for updated artifact instruction, instead of submitted manual.
+Please refer to this [upaded draft](https://seahk.github.io/data/supernova_asplos.pdf) for new artifact instruction, instead of submitted manual.
 Instructions are updated.
 
 Upon getting the server access, please install [Conda](https://chipyard.readthedocs.io/en/latest/Chipyard-Basics/Initial-Repo-Setup.html#default-requirements-installation) before running setup script
