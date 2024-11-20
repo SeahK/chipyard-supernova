@@ -1,0 +1,6 @@
+RuntimeHWConfig: alveo_u250_firesim_supernova_ae
+DeployQuintuplet: xilinx_alveo_u250-firesim-FireSim-FireSimSupernovaConfig-BaseXilinxAlveoU250Config
+DeployMakefrag: /scratch/seah/chipyard-supernova/generators/firechip/chip/src/main/makefrag/firesim
+AGFI: None
+Bitstream tar: ../../firesim.tar.gz
+CustomRuntimeConf: None
