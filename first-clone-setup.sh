@@ -23,7 +23,8 @@ source sourceme-manager.sh --skip-ssh-setup
 cd deploy
 firesim managerinit --platform xilinx_alveo_u250
 # copy config yml files
-cp ../../../ae_config* .
+cp ../../../ae_config_runtime.yaml config_runtime.yaml
+cp ../../../ae_config_hwdb.yaml config_hwdb.yaml
 
 # run through elaboration flow to get chisel/sbt all setup
 #cd ../sim
