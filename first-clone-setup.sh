@@ -4,13 +4,13 @@ set -e
 set -o pipefail
 
 
-#RDIR=$(git rev-parse --show-toplevel)
+#CYDIR=$(git rev-parse --show-toplevel)
 
 #git config --global protocol.file.allow always
 
-RDIR=$(pwd)
+CYDIR=$(pwd)
 
-cd $RDIR
+cd $CYDIR
 
 echo "running build script"
 # build setup
@@ -30,7 +30,7 @@ cp ../../../ae_config* .
 #echo "chisel/sbt setup"
 #make f1
 
-cd $RDIR
+cd $CYDIR
 # build target software
 cd software/firemarshal
 echo "Firemarshal setup"
@@ -39,7 +39,7 @@ echo "Firemarshal setup"
 ./marshal -v install br-base.json
 echo "done marshal setup"
 
-cd $RDIR
+cd $CYDIR
 cd generators/ae-binary
 unzip "*.zip"
 cd ..
@@ -59,4 +59,4 @@ rm build/slam/*
 cp ../../ae-binary/*-linux build/slam/*
 
 
-cd $RDIR
+cd $CYDIR
