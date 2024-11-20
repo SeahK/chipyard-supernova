@@ -35,12 +35,15 @@ cd $RDIR
 cd software/firemarshal
 echo "Firemarshal setup"
 ./init-submodules.sh
-marshal -v build br-base.json
+./marshal -v build br-base.json
+./marshal -v install br-base.json
+echo "done marshal setup"
 
 cd $RDIR
 cd generators/ae-binary
 unzip "*.zip"
 cd ..
+echo "supernova setup"
 cd supernova/software
 #submodule
 git submodule update --init --recursive
@@ -48,6 +51,7 @@ git submodule update --init --recursive
 #unzip sample.zip
 #rm sample.zip
 
+echo "building workload"
 # build workload
 ./build.sh
 rm build/slam/*
