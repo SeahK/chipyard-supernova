@@ -1,3 +1,15 @@
+# IMPORTANT NOTES
+
+Please refer to this [link](https://seahk.github.io/data/supernova_asplos.pdf) for updated artifact instruction, instead of submitted manual.
+Instructions are updated.
+
+Upon getting the server access, please install [Conda](https://chipyard.readthedocs.io/en/latest/Chipyard-Basics/Initial-Repo-Setup.html#default-requirements-installation) before running setup script
+
+Also [setup SSH](https://docs.fires.im/en/main/Local-FPGA-Initial-Setup.html#non-sudo-setup) for `ssh localhost`. Once setup is done, when you open a new terminal (and `ssh-agent` is already running), you can simply run `source ~/.ssh/AGENT_VARS`.
+
+
+# Below is from Chipyard README
+
 ![CHIPYARD](https://github.com/ucb-bar/chipyard/raw/main/docs/_static/images/chipyard-logo-full.png)
 
 # Chipyard Framework [![Test](https://github.com/ucb-bar/chipyard/actions/workflows/chipyard-run-tests.yml/badge.svg)](https://github.com/ucb-bar/chipyard/actions)
