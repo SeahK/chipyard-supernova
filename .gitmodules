@@ -156,4 +156,4 @@
 	url = https://github.com/ucb-bar/vexiiriscv-tile.git
 [submodule "generators/supernova"]
 	path = generators/supernova
-	url = git@github.com:ucb-bar/SuperNoVA.git
+	url = https://github.com/ucb-bar/SuperNoVA.git
