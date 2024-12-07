@@ -20,6 +20,6 @@ midasexamples_gcd:
 
 alveo_u250_firesim_supernova_ae:
     bitstream_tar: ../../firesim.tar.gz
-    #bitstream_tar: file:///scratch/seah/chipyard-supernova/sims/firesim/deploy/results-build/2024-11-17--03-06-25-alveo_u250_firesim_supernova_ae/cl_xilinx_alveo_u250-firesim-FireSim-FireSimSupernovaConfig-BaseXilinxAlveoU250Config/firesim.tar.gz
     deploy_quintuplet_override: null
+    deploy_makefrag_override: ../../../generators/firechip/chip/src/main/makefrag/firesim
     custom_runtime_config: null
